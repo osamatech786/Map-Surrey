@@ -168,7 +168,7 @@ def update_data_page():
     if not st.session_state.authenticated:
         password = st.text_input("Enter Password:", type="password")
         if st.button("Submit Password"):
-            if password == "Map786":
+            if password == get_secret("PASS"):
                 st.session_state.authenticated = True
                 st.success("Access Granted")
             else:
